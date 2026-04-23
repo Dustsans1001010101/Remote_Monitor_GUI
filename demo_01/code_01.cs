@@ -11,12 +11,9 @@ public partial class Form1 : Form
     {
         InitializeComponent();
         SetupEvents();
-        SetupClientEvents(); // ✅ QUAN TRỌNG
+        SetupClientEvents(); 
     }
-
-    // ═══════════════════════════════════════
     // SERVER EVENTS
-    // ═══════════════════════════════════════
     private void SetupEvents()
     {
         button2.Enabled = false;
@@ -46,10 +43,7 @@ public partial class Form1 : Form
             }));
         };
     }
-
-    // ═══════════════════════════════════════
     // CLIENT EVENTS
-    // ═══════════════════════════════════════
     private void SetupClientEvents()
     {
         _client.OnLog += msg => AppendClientLog(msg);
@@ -85,11 +79,7 @@ public partial class Form1 : Form
             }));
         };
     }
-
-    // ═══════════════════════════════════════
     // SERVER TAB
-    // ═══════════════════════════════════════
-
     private void button1_Click(object sender, EventArgs e)
     {
         try
@@ -193,11 +183,7 @@ public partial class Form1 : Form
 
         richTextBox1.ScrollToCaret();
     }
-
-    // ═══════════════════════════════════════
     // CLIENT TAB
-    // ═══════════════════════════════════════
-
     private async void button9_Click(object sender, EventArgs e)
     {
         try
@@ -258,11 +244,7 @@ public partial class Form1 : Form
 
         richTextBox2.ScrollToCaret();
     }
-
-    // ═══════════════════════════════════════
-    // FIX LỖI DESIGNER (BẮT BUỘC)
-    // ═══════════════════════════════════════
-
+   
     private void tabPage2_Click(object sender, EventArgs e) { }
 
     private void label11_Click(object sender, EventArgs e) { }
